@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($id) || empty($month) || empty($year)) {
         echo "<p class='error'>Please select an ID, month, and year.</p>";
     } else {
-        $csvFilename = "TourFiles/$id-$year-$month.csv";
+        $csvFilename = "../TourFiles/$id-$year-$month.csv";
 
         if (!file_exists($csvFilename)) {
             echo "<p class='error'>The file <strong>$csvFilename</strong> does not exist.</p>";
