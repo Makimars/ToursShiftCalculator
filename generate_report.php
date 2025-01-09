@@ -116,6 +116,11 @@ $last_used_id = $_COOKIE['last_used_id'] ?? '';
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="navigation-buttons">
+    <a href="add_shift.php" class="nav-button">Add Shift</a>
+    <a href="generate_report.php" class="nav-button">Generate Report</a>
+</div>
+
 <div class="container">
     <h2>Generate Report</h2>
     

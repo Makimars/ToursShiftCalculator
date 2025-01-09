@@ -47,6 +47,12 @@ $last_shift_type = $_COOKIE['last_shift_type'] ?? '';
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="navigation-buttons">
+    <a href="add_shift.php" class="nav-button">Add Shift</a>
+    <a href="generate_report.php" class="nav-button">Generate Report</a>
+</div>
+
 <div class="container">
     <h1>Add a Shift</h1>
     
