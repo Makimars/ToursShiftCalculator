@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $year  = $dateParts[0] ?? 'unknownYear';
     $month = $dateParts[1] ?? 'unknownMonth';
 
-    $filename = "files/$id-$year-$month.csv";
+    $filename = "../TourFiles/$id-$year-$month.csv";
     $file = fopen($filename, 'a');
     $data = [$shift_type, $date, $time, $people_count, $bonus_day, $fewer_people];
     fputcsv($file, $data);

@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($is_output_csv) {
             // Output as CSV file
-            $csv_file = "files/csv_report.csv";
+            $csv_file = "../TourFiles/csv_report.csv";
             file_put_contents($csv_file, $csv_report);
 
             header('Content-Type: text/csv');
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Output as Excel file
             $templateFile = 'report_template.xlsx';
-            $outputFile = "files/$id-$year-$month.xlsx";
+            $outputFile = "../TourFiles/$id-$year-$month.xlsx";
 
             if (!file_exists($templateFile)) {
                 echo "<p class='error'>The template file <strong>$templateFile</strong> does not exist.</p>";
