@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $csvFilename = "../TourFiles/$id-$year-$month.csv";
 
         if (!file_exists($csvFilename)) {
-            echo "<p class='error'>The file <strong>$csvFilename</strong> does not exist.</p>";
+            echo "<p class='error'>A file with this ID for this month does not exist.</p>";
             exit;
         }
 
@@ -63,13 +63,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $outputFile = "../TourFiles/$id-$year-$month.xlsx";
 
             if (!file_exists($templateFile)) {
-                echo "<p class='error'>The template file <strong>$templateFile</strong> does not exist.</p>";
+                echo "<p class='error'>The template file does not exist, please contact the administrator.</p>";
                 exit;
             }
 
             // Copy the template file to the new file
             if (!copy($templateFile, $outputFile)) {
-                echo "<p class='error'>Failed to copy the template file to <strong>$outputFile</strong>.</p>";
+                echo "<p class='error'>Failed to copy the template file, please contact the administrator.</p>";
                 exit;
             }
 

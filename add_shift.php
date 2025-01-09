@@ -1,7 +1,7 @@
 <?php
 // Set the cookies on form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'] ?? '';
+    $id = strtoupper($_POST['id'] ?? '');
     $shift_type = $_POST['shift_type'] ?? '';
 
     // Set the "last_used_id" cookie
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fputcsv($file, $data);
     fclose($file);
 
-    echo "<div class='notification'>Shift successfully added to <strong>$filename</strong>!</div>";
+    echo "<div class='notification'>Shift successfully added!</div>";
 }
 
 // Load the cookies
