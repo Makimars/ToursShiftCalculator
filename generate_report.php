@@ -11,7 +11,7 @@ $is_output_csv = false;
 
 // Set the cookies on form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'] ?? '';
+    $id = strtoupper($_POST['id'] ?? '');
     if (!empty($id)) {
         setcookie('last_used_id', $id, time() + (86400 * 30), "/"); // Expires in 30 days
     }
