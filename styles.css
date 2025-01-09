@@ -1,0 +1,87 @@
+/* styles.css */
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    color: #444;
+}
+
+/* Label and Input fields */
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: calc(100% - 160px);
+    padding: 5px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.checkbox-group label {
+    width: auto;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+/* Button */
+button {
+    display: block;
+    margin: 0 auto;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+
+/* Notification */
+.notification {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #e9f8e9;
+    color: #317331;
+    padding: 10px 20px;
+    border: 1px solid #cde5cd;
+    border-radius: 4px;
+}
+
