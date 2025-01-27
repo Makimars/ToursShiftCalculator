@@ -99,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
             header("Content-Disposition: attachment; filename=\"$id-$year-$month.xlsx\"");
             readfile($outputFile);
+            unlink($outputFile);
             exit;
         }
     }
@@ -118,6 +119,7 @@ $last_used_id = $_COOKIE['last_used_id'] ?? '';
 <body>
 <div class="navigation-buttons">
     <a href="add_shift.php" class="nav-button">Add Shift</a>
+    <a href="get_calendar.php" class="nav-button">Get shift calendar</a>
     <a href="generate_report.php" class="nav-button">Generate Report</a>
 </div>
 
